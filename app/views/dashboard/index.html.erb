@@ -1,0 +1,25 @@
+
+
+<% @matches.each do |match| %>
+  <div class="row">
+    <div class="col-xs-5">
+      <%= render partial:'scraped_product_detail', :locals => {:product => match.fravega_product} %>
+    </div>
+    <div class="col-xs-2" style="padding: 30px 0px;">
+      <%= content_tag(:div, class: ['alert', (match.should_flag? ? 'alert-warning' : 'alert-success')]) do %>
+        <p>Fravega: USD <%= match.fravega_product.price_in "USD" %></p>
+        <p>Wallmart: USD <%= match.wallmart_product.price %></p>
+        <p><b> Ratio:
+          <% if match.fravega_to_wallmart_ratio > 1 %>
+            + <%= number_to_percentage((match.fravega_to_wallmart_ratio - 1) * 100, precision: 2) %>
+          <% else %>
+            - <%= number_to_percentage((1 - match.fravega_to_wallmart_ratio) * 100, precision: 2) %>
+          <% end %>
+        </b></p>
+      <% end %>
+    </div>
+    <div class="col-xs-5">
+      <%= render partial:'scraped_product_detail', :locals => {:product => match.wallmart_product} %>
+    </div>
+  </div>
+<% end %>

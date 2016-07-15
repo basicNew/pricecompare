@@ -1,0 +1,13 @@
+
+<div class="row">
+  <div class="col-xs-6">
+    <%= image_tag(product[:image_url]) %>
+  </div>
+
+  <div class="col-xs-6">
+    <h4><%= product.full_name %></h4>
+    <h4><%= product.price.format( symbol: product.price.currency.to_s + ' ') %></h4>
+    <p><%= product.store %></p>
+    <p><%= link_to product.url %></p>
+  </div>
+</div>

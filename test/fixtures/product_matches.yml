@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wallmart_product_id: 1
+  fravega_product_id: 1
+
+two:
+  wallmart_product_id: 1
+  fravega_product_id: 1
