@@ -7,10 +7,12 @@ namespace :scrape do
   end
 
   task tv: :environment do
+    original_matches = ProductMatch.count
     FravegaScraper.new.run
     WallmartScraper.new.run
     ProductMatchmaker.new.find_matches
-    puts "TV scrape finished"
+    current_matches = ProductMatch.count
+    puts "TV scrape finished: #{current_matches - original_matches} found"
   end
 
   task clean_run: :environment do
