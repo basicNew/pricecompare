@@ -8,6 +8,6 @@
     <h4><%= product.full_name %></h4>
     <h4><%= product.price.format( symbol: product.price.currency.to_s + ' ') %></h4>
     <p><%= product.store %></p>
-    <p><%= link_to product.url %></p>
+    <p><%= link_to product.url, product.url %></p>
   </div>
 </div>
