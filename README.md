@@ -45,6 +45,6 @@ A minimalistic proof-of-concept of crawling two sites that sell the same type of
 
 ## License
 
-[MIT](http://www.opensource.org/licenses/MIT
+[MIT](http://www.opensource.org/licenses/MIT)
 
 
