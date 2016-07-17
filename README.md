@@ -1,6 +1,8 @@
 # Pricecompare
 A minimalistic proof-of-concept of crawling two sites that sell the same type of products in different countries to find product matches and compare the prices considering the actual currency exchange.
 
+Right now the application looks for Samsung TVs in [Fravega](http://www.fravega.com) (Argentina) and [Wallmart](http://www.walmart.com) (USA) stores.
+
 ## Getting Started
 
 1. Clone this repository:
@@ -11,7 +13,7 @@ A minimalistic proof-of-concept of crawling two sites that sell the same type of
 
         $ cd pricecompare
 
-3. Install bundler
+3. Install bundler if you haven't already
 
         $ gem install bundler
 
@@ -23,11 +25,7 @@ A minimalistic proof-of-concept of crawling two sites that sell the same type of
 
         $ bin/rake db:migrate
 
-6. Launch the rails app
-
-        $ bin/rails s
-
-7. Run the rake task that performs the web crawling and find the matches
+6. Run the rake task that performs the web crawling and find the matches
 
         $ bin/rake scrape:clean_run
         Running via Spring preloader in process 12469
@@ -38,6 +36,10 @@ A minimalistic proof-of-concept of crawling two sites that sell the same type of
         Fetching product from http://www.walmart.com/ip/Samsung-UN50JU6500-50-4K-Ultra-HD-2160p-60Hz-LED-Smart-HDTV-4K-x-2K/44162676 [OK]
         Fetching product from http://www.walmart.com/ip/Samsung-UN40J5500-40-1080p-60Hz-LED-Smart-HDTV/44162670 [OK]
         TV scrape finished: 3 found
+
+7. Launch the rails app
+
+        $ bin/rails s
 
 8. Visit `localhost:3000` and you should see the three matches found.
 
