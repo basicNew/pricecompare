@@ -43,7 +43,7 @@ Right now the application looks for Samsung TVs in [Fravega](http://www.fravega.
 
 8. Visit `localhost:3000` and you should see the three matches found.
 
-[[https://github.com/basicNew/pricecompare/blob/master/public/sample.png]]
+![alt tag](https://raw.githubusercontent.com/basicNew/pricecompare/master/public/sample.png)
 
 9. Go to the admin backend if you want to take a look at all the scraped products.
 
